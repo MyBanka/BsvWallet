@@ -1,0 +1,101 @@
+{
+  "_from": "bsv-wallet",
+  "_id": "bsv-wallet@1.1.9",
+  "_inBundle": false,
+  "_integrity": "sha512-CpGWVjTjJdMhuZzn01GNblHO1jJYUMsMdCdAgTch715h8/Ou3ZUj9Q26W97UdIYQWoia+KDbHd4W8ZJylSt4qg==",
+  "_location": "/bsv-wallet",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "bsv-wallet",
+    "name": "bsv-wallet",
+    "escapedName": "bsv-wallet",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/bsv-wallet/-/bsv-wallet-1.1.9.tgz",
+  "_shasum": "95d13b65b23abc269e09bf56ca77d1ecd2e3ae4b",
+  "_spec": "bsv-wallet",
+  "_where": "D:\\travaille\\BSV",
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/MyBanka/BsvWallet/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "axios": "^0.27.2",
+    "bsv": "^1.5.6",
+    "node-localstorage": "^2.2.1"
+  },
+  "deprecated": false,
+  "description": "A Bitcoin SV Wallet Library",
+  "devDependencies": {
+    "@parcel/packager-ts": "^2.7.0",
+    "@parcel/transformer-typescript-types": "^2.7.0",
+    "@types/node": "^18.6.5",
+    "assert": "^2.0.0",
+    "buffer": "^6.0.3",
+    "constants-browserify": "^1.0.0",
+    "crypto-browserify": "^3.12.0",
+    "events": "^3.3.0",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "stream-browserify": "^3.0.0",
+    "typescript": "^4.7.4",
+    "util": "^0.12.4"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "homepage": "https://github.com/MyBanka/BsvWallet#readme",
+  "keywords": [
+    "javascript",
+    "bsv",
+    "wallet",
+    "bitcoin",
+    "whitepaper",
+    "satoshi",
+    "P2P",
+    "blockchain",
+    "transaction",
+    "easy",
+    "simple"
+  ],
+  "license": "ISC",
+  "main": "lib/index.js",
+  "module": "lib/module.js",
+  "name": "bsv-wallet",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MyBanka/BsvWallet.git"
+  },
+  "scripts": {
+    "build": "tsc && npm run build:browser",
+    "build:browser": "npx parcel lib/index.js --dist-dir lib/browser",
+    "buildexp": "npx parcel build --target browseryep",
+    "dev": "tsc --watch",
+    "dev:notworking": "parcel watch src/index.ts",
+    "pack": "webpack",
+    "test": "node test/test.js",
+    "test:notworking": "concurrently \"parcel watch test/index.ts --dist-dir test/dist\" \"nodemon test/dist/index.js\""
+  },
+  "source": "src/index.ts",
+  "targets": {
+    "browseryep": {
+      "isLibrary": true,
+      "context": "browser",
+      "outputFormat": "commonjs",
+      "engines": {
+        "browsers": "> 20%, last 2 versions, not dead, not ie < 10"
+      }
+    }
+  },
+  "types": "lib/index.d.ts",
+  "version": "1.1.9"
+}
